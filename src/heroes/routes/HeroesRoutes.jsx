@@ -6,7 +6,7 @@ export const HeroesRoutes = () => {
   return (
     <>
       <Navbar />
-      <div className="container">
+      <div className="container mt-5">
         <Routes>
           <Route path="/marvel" element={<MarvelPage />} />
           <Route path="/dc" element={<DcPage />} />
