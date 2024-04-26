@@ -32,7 +32,7 @@ export const SearchPage = () => {
         <div className="col-5">
           <h4>Searching</h4>
           <hr />
-          <form onSubmit={onSearchSubmit}>
+          <form onSubmit={onSearchSubmit} aria-label="form">
             <input
               type="text"
               name="searchText"
@@ -49,7 +49,7 @@ export const SearchPage = () => {
           <h4>Results</h4>
           <hr />
 
-          { /* {q === "" ? (
+          {/* {q === "" ? (
             <div className="alert alert-primary">Search a hero</div>
           ) : (
             heroes.length === 0 && (
@@ -57,9 +57,10 @@ export const SearchPage = () => {
                 No hero with <b>{q}</b>
               </div>
             )
-          )} */ }
+          )} */}
 
           <div
+            aria-label="alert-search"
             className="alert alert-primary animate__animated animate__fadeIn"
             style={{ display: showSearch ? "" : "none" }}
           >
@@ -67,6 +68,7 @@ export const SearchPage = () => {
           </div>
 
           <div
+            aria-label="alert-danger"
             className="alert alert-danger animate__animated animate__fadeIn"
             style={{ display: showError ? "" : "none" }}
           >
